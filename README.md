@@ -17,6 +17,7 @@ Emir Gökdemir
 
 # Repository Structure 
 * Node: Code for embedded processing and connectivity
+* Cloud: Code for cloud
 * UI: Code for user interface(s)
 * Figures
    * Screenshot(s) of UI 
