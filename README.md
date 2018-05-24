@@ -1,5 +1,5 @@
 # SmartCleaning
-
+CmpE 490 IoT Course Final Project, 2018 Spring, Bogazici University Computer Engineering Department
 # Description of the project
 
 Problem: cleaning is done regularly, not optimized  
@@ -30,7 +30,11 @@ Arduino, Wifi Module, Switch, Bluemix IOT Platform Starter
 Arduino is used with Wifi Module. Three switch is connected to digital inputs of Arduino.
 
 ### Flow of data 
-
+-Arduino sends the digital inputs to Bluemix IOT Platform.
+-Data is read with nodered.
+-It is compared with old data.
+-Send result to counter.
+-UI takes data from counter.
 
 ### Development Environment
 Node Red v0.18.5
