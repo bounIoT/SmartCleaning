@@ -2,7 +2,7 @@
 
 # Description of the project
 
-Problem: cleaning is done regularly, not optimized
+Problem: cleaning is done regularly, not optimized  
 Solution:
 -Counting the numbers of the door activity
 -Showing these data in UI.
@@ -11,9 +11,9 @@ Solution:
 
 # Team Members
 
-Enes Bekereci
-N. Totikos
-Emir Gökdemir
+Enes Bekereci  
+N. Totikos  
+Emir Gökdemir  
 
 # Repository Structure 
 * Node: Code for embedded processing and connectivity
