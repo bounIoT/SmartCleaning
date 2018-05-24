@@ -32,5 +32,6 @@ Arduino is used with Wifi Module. Three switch is connected to digital inputs of
 
 
 ### Development Environment
-
+Node Red v0.18.5
+Google Chrome v66.0.3359.181
 
