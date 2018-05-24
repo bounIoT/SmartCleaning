@@ -29,7 +29,7 @@ Arduino, Wifi Module, Switch, Bluemix IOT Platform Starter
 Arduino is used with Wifi Module. Three switch is connected to digital inputs of Arduino.
 
 ### Flow of data 
-Draw flow of data in your **implementation**. At each node, specify the name of the code that processes the input data and produces the output. Note that the code name, input data name, output name must be consistent with the names at the Code part.
+
 
 ### Development Environment
 
