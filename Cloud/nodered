@@ -1,1 +1,624 @@
-
+[
+    {
+        "id": "f87ede51.886aa",
+        "type": "http in",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "url": "/data",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "d5f48de1.a52c5",
+                "9194a54d.84ce38",
+                "316ccab.3670736",
+                "9c0058a7.04f9f8",
+                "f45b7778.941028"
+            ]
+        ]
+    },
+    {
+        "id": "d5f48de1.a52c5",
+        "type": "http response",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 351,
+        "y": 125,
+        "wires": []
+    },
+    {
+        "id": "9194a54d.84ce38",
+        "type": "debug",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 334,
+        "y": 76,
+        "wires": []
+    },
+    {
+        "id": "316ccab.3670736",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "kapi01",
+        "func": "msg.payload=msg.payload.field1;\nglobal.set(\"kapi1\",msg.payload);\nif(msg.payload==1){\n    msg.payload=\"Kapalı\";\n}else{\n    msg.payload=\"Açık\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 408,
+        "y": 166,
+        "wires": [
+            [
+                "de96193d.37c068"
+            ]
+        ]
+    },
+    {
+        "id": "9c0058a7.04f9f8",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "kapi02",
+        "func": "msg.payload=msg.payload.field2;\nglobal.set(\"kapi2\",msg.payload);\nif(msg.payload==1){\n    msg.payload=\"Kapalı\";\n}else{\n    msg.payload=\"Açık\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 442,
+        "y": 214,
+        "wires": [
+            [
+                "3e5db1f6.0cd0fe"
+            ]
+        ]
+    },
+    {
+        "id": "f45b7778.941028",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "kapi03",
+        "func": "msg.payload=msg.payload.field3;\nglobal.set(\"kapi3\",msg.payload);\nif(msg.payload==1){\n    msg.payload=\"Kapalı\";\n}else{\n    msg.payload=\"Açık\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 441,
+        "y": 257,
+        "wires": [
+            [
+                "a94e9e01.9e203"
+            ]
+        ]
+    },
+    {
+        "id": "ec562140.31a78",
+        "type": "ui_chart",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "group": "c19ee7b1.912498",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Kapı1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 586,
+        "y": 426,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e937e97f.354d38",
+        "type": "ui_chart",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "group": "c19ee7b1.912498",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Kapı2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 579,
+        "y": 473,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "975d184c.314558",
+        "type": "ui_chart",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "group": "c19ee7b1.912498",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Kapı3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 578,
+        "y": 517,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2fdc4953.c266b6",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "func": "global.set(\"counter\",0);\nglobal.set(\"counter2\",0);\nglobal.set(\"counter3\",0);\nglobal.set(\"temp\",0);\nglobal.set(\"temp2\",0);\nglobal.set(\"temp3\",0);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 413,
+        "y": 312,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6fb210cd.c4519",
+        "type": "inject",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 190,
+        "y": 307,
+        "wires": [
+            [
+                "2fdc4953.c266b6"
+            ]
+        ]
+    },
+    {
+        "id": "678eb274.7e30dc",
+        "type": "inject",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "x": 154,
+        "y": 358,
+        "wires": [
+            [
+                "1d591635.fce81a",
+                "ed040721.82ff68",
+                "bc2278ee.5969c8"
+            ]
+        ]
+    },
+    {
+        "id": "1d591635.fce81a",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "sayac1",
+        "func": "var count=global.get(\"counter\");\nvar kapi=global.get(\"kapi1\");\nvar tem=global.get(\"temp\");\nif(tem!=kapi){\n    count++;\n}\nglobal.set(\"temp\",kapi);\n\nglobal.set(\"counter\",count);\nmsg.payload=count;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 425,
+        "y": 362,
+        "wires": [
+            [
+                "9cfadfeb.14fcb",
+                "ec562140.31a78",
+                "cadd269d.faa168"
+            ]
+        ]
+    },
+    {
+        "id": "9cfadfeb.14fcb",
+        "type": "debug",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 613,
+        "y": 373,
+        "wires": []
+    },
+    {
+        "id": "ed040721.82ff68",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "sayac2",
+        "func": "var count=global.get(\"counter2\");\nvar kapi=global.get(\"kapi2\");\nvar tem=global.get(\"temp2\");\nif(tem!=kapi){\n    count++;\n}\nglobal.set(\"temp2\",kapi);\n\nglobal.set(\"counter2\",count);\nmsg.payload=count;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 413,
+        "y": 414,
+        "wires": [
+            [
+                "e937e97f.354d38",
+                "4ac7734.7f5128c"
+            ]
+        ]
+    },
+    {
+        "id": "bc2278ee.5969c8",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "sayac3",
+        "func": "var count=global.get(\"counter3\");\nvar kapi=global.get(\"kapi3\");\nvar tem=global.get(\"temp3\");\nif(tem!=kapi){\n    count++;\n}\nglobal.set(\"temp3\",kapi);\n\nglobal.set(\"counter3\",count);\nmsg.payload=count;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 411,
+        "y": 461,
+        "wires": [
+            [
+                "975d184c.314558",
+                "b0736c74.1bdc3"
+            ]
+        ]
+    },
+    {
+        "id": "cadd269d.faa168",
+        "type": "ui_gauge",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "group": "37e19f89.12071",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "3",
+        "seg2": "5",
+        "x": 727,
+        "y": 423,
+        "wires": []
+    },
+    {
+        "id": "4ac7734.7f5128c",
+        "type": "ui_gauge",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "group": "37e19f89.12071",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "3",
+        "seg2": "5",
+        "x": 728,
+        "y": 473,
+        "wires": []
+    },
+    {
+        "id": "b0736c74.1bdc3",
+        "type": "ui_gauge",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "group": "37e19f89.12071",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "3",
+        "seg2": "5",
+        "x": 733,
+        "y": 531,
+        "wires": []
+    },
+    {
+        "id": "de96193d.37c068",
+        "type": "ui_text",
+        "z": "deb0d57.1c46528",
+        "group": "49cfddea.4060d4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kapı1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 608,
+        "y": 168,
+        "wires": []
+    },
+    {
+        "id": "3e5db1f6.0cd0fe",
+        "type": "ui_text",
+        "z": "deb0d57.1c46528",
+        "group": "49cfddea.4060d4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kapı2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 611,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a94e9e01.9e203",
+        "type": "ui_text",
+        "z": "deb0d57.1c46528",
+        "group": "49cfddea.4060d4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kapı3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 616,
+        "y": 269,
+        "wires": []
+    },
+    {
+        "id": "9ced7f32.b11fa",
+        "type": "ui_button",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "group": "49cfddea.4060d4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Sıfırla1",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "x": 152,
+        "y": 472,
+        "wires": [
+            [
+                "2a815a8e.d595a6"
+            ]
+        ]
+    },
+    {
+        "id": "c721f422.de9358",
+        "type": "ui_button",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "group": "49cfddea.4060d4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Sıfırla2",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "x": 146,
+        "y": 526,
+        "wires": [
+            [
+                "5ed71bbd.140794"
+            ]
+        ]
+    },
+    {
+        "id": "33c25e00.cffd02",
+        "type": "ui_button",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "group": "49cfddea.4060d4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Sıfırla3",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "x": 155,
+        "y": 574,
+        "wires": [
+            [
+                "b52f8dab.d246b"
+            ]
+        ]
+    },
+    {
+        "id": "b52f8dab.d246b",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "func": "global.set(\"counter3\",0);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 293,
+        "y": 574,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ed71bbd.140794",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "func": "global.set(\"counter2\",0);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 295,
+        "y": 538,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2a815a8e.d595a6",
+        "type": "function",
+        "z": "deb0d57.1c46528",
+        "name": "",
+        "func": "global.set(\"counter\",0);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 289,
+        "y": 502,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c19ee7b1.912498",
+        "type": "ui_group",
+        "z": "",
+        "name": "group01g",
+        "tab": "13a61d7a.22a1c3",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "37e19f89.12071",
+        "type": "ui_group",
+        "z": "",
+        "name": "group02g",
+        "tab": "13a61d7a.22a1c3",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "49cfddea.4060d4",
+        "type": "ui_group",
+        "z": "",
+        "name": "group03g",
+        "tab": "13a61d7a.22a1c3",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "13a61d7a.22a1c3",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard"
+    }
+]
