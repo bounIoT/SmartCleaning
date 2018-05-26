@@ -1,3 +1,4 @@
+//this is code that is uploaded to arduino board
 #define ag_ismi "CMPE_IOT"
 #define ag_sifresi "cmpeiot123"
 #define address "smartcleaning.eu-gb.mybluemix.net"
