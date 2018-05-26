@@ -29,13 +29,14 @@ Arduino, Wifi Module, Switch, Bluemix IOT Platform Starter
 Arduino is used with Wifi Module. Three switch is connected to digital inputs of Arduino.
 
 ### Flow of data 
--Arduino sends the digital inputs to Bluemix IOT Platform.
--Data is read with nodered.
--It is compared with old data.
--Send result to counter.
--UI takes data from counter.
+-Arduino sends the digital inputs to Bluemix IOT Platform. Arduino code is used. Takes input from switches, sen it to cloud.
+-Data is read with nodered. Digital data is taken from node.
+-It is compared with old data. It is done by cloud code.
+-Send result to counter.  It is done in bluemix.
+-UI takes data from counter. Displays on the web.
 
 ### Development Environment
-Node Red v0.18.5
-Google Chrome v66.0.3359.181
+Node Red v0.18.5  
+Google Chrome v66.0.3359.181  
+Arduino v1.8.5
 
