@@ -17,11 +17,10 @@ Emir Gökdemir
 
 # Repository Structure 
 * Node: Code for embedded processing and connectivity
-* Cloud: Code for cloud
-* UI: Code for user interface(s)
+* Cloud: Code for nodered and ui
 * Figures
-   * Screenshot(s) of UI 
-   * Hardware Images used in project
+   * Screenshot of UI 
+   * Screenshot of nodes
 
 ### Technology
 Arduino, Wifi Module, Switch, Bluemix IOT Platform Starter
